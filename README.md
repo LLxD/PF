@@ -17,3 +17,9 @@ Declarações de listas e utilização de funções nos elementos de uma lista
 Trabalhando com string:
 
 ![String](https://magenta-cloche-143.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa47f335b-4153-4b32-8c48-e289b91f6b84%2FUntitled.png?table=block&id=db356ffe-e7ab-4618-a4d2-537f606fb056&spaceId=055ecaca-9ef1-471a-8633-6578d6225e05&width=2000&userId=&cache=v2)
+
+## Alterações para o flappy-bird:
+
+Flappy-bird mais fácil:
+Alteração na gravidade e no espaço entre os canos:
+![image](https://user-images.githubusercontent.com/48529975/153605787-bb60b0df-e0e5-4853-95df-1cef81ac6254.png)
