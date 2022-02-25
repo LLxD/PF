@@ -3,6 +3,18 @@
     (with-input-from-file path
         (lambda () (read-string 5000000))))
 
+(define (appendToFile content path)
+    (with-output-to-file path
+        #:mode 'text
+        #:exists 'append
+        (lambda () (printf content))))
+
+(define (replaceFile content path)
+    (with-output-to-file path
+        #:mode 'text
+        #:exists 'replace
+        (lambda () (printf content))))
+
 (define arquivo (readFile "./sample.txt"))
 
 (define palavras (string-split arquivo ))
