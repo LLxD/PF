@@ -23,3 +23,34 @@ Trabalhando com string:
 Flappy-bird mais fácil:
 Alteração na gravidade e no espaço entre os canos:
 ![image](https://user-images.githubusercontent.com/48529975/153605787-bb60b0df-e0e5-4853-95df-1cef81ac6254.png)
+
+## REGEX e ampliando o trabalho com strings em arquivos
+
+Para ler o conteúdo de um arquivo de texto, utilizamos:
+
+```racket
+(define (readFile path)
+    (with-input-from-file path
+        (lambda () (read-string 5000000))))
+```
+
+Depois, para a separação de strings e palavras utilizamos primeiramente uma função da própria linguagem, a string-split
+
+```racket
+(define arquivo (readFile "./sample.txt"))
+(define palavras (string-split arquivo ))
+(define paragrafos (string-split arquivo ".\n"))
+(print "Número de palavras no arquivo: ")
+(length palavras)
+(print "Número de parágrafos no arquivo: ")
+(length paragrafos)
+```
+
+Os arrays de palavras e parágrafos são então, contados e avaliados e o retorno foi:
+
+```console
+"Número de palavras no arquivo: "473
+"Número de parágrafos no arquivo: "5
+```
+
+Aparentemente, string-split utiliza ideias de REGEX para fazer suas separações com um separador que pode ser fornecido (default é o espaço).
